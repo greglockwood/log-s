@@ -1,0 +1,52 @@
+{
+  "name": "logging-server",
+  "version": "0.0.1",
+  "description": "Node server which collects logs from different clients",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --harmony-async-await ./index.js",
+    "test": "npm run jshint && npm run jscs && npm run mocha",
+    "mocha": "node_modules/.bin/mocha ./index.spec.js",
+    "jscs": "node_modules/.bin/jscs .",
+    "jshint": "node_modules/.bin/jshint --exclude ./node_modules . --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/megahertz/logging-server.git"
+  },
+  "files": [
+    "index.js",
+    "lib/**/*.js",
+    "README.md"
+  ],
+  "keywords": [
+    "logging",
+    "server",
+    "websockets",
+    "gui"
+  ],
+  "author": "Alexey Prokhorov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/megahertz/logging-server/issues"
+  },
+  "homepage": "https://github.com/megahertz/logging-server#readme",
+  "engines": {
+    "node": ">=7.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "ws": "^2.1.0"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-import-resolver-node": "^0.3.0",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
