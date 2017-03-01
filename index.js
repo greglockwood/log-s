@@ -1,4 +1,4 @@
-#! /usr/bin/env node --harmony-async-await
+#!/usr/bin/node --harmony-async-await
 
 'use strict';
 
