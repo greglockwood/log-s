@@ -6,11 +6,15 @@ Sometimes you can't use a debugger. In this case it's possible to write
 some data to log, but log file becomes too hard for reading. This server
 collects a such logs and displays it similar to Chrome Dev Tools.
 
+## Requirements
+
+Node >= 7
+
 ## Installation
 
 Install with [npm](https://npmjs.org/package/log-s):
 
-    npm install log-s
+    npm install -g log-s
 
 ## Usage
 
