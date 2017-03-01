@@ -1,0 +1,204 @@
+/* ********** Main ********** */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, .react-wrapper {
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background: #282828;
+  color: #ddd;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+  overflow: hidden;
+}
+
+i {
+  color: #999;
+  cursor: pointer;
+  font-size: 20px;
+  font-style: normal;
+  line-height: 20px;
+  height: 16px;
+  margin: 2px 4px;
+  text-align: center;
+  width: 16px;
+}
+
+i:before {
+  display: inline-block;
+}
+
+::-webkit-scrollbar {
+  background: #333;
+  border-radius: 5px;
+  height: 10px;
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+/* ********** Header ********** */
+
+header {
+  display: flex;
+  flex-direction: row;
+  padding: 4px 8px;
+}
+
+.filter {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #777;
+  color: #ddd;
+  display: block;
+  flex: 1;
+  margin: 0 7px 0 3px;
+  min-width: 30px;
+  outline: none;
+}
+
+.filter:focus {
+  border-bottom: 1px solid #aaa;
+}
+
+.icon-clear:before {
+  content: "🚫";
+  font-size: 15px;
+  margin-top: -1px;
+}
+
+.icon-stop:before {
+  content: "⚫";
+}
+
+.icon-stop.active:before {
+  color: #f66;
+  text-shadow: 0 0 5px #f66;
+}
+
+/* ********** Log list ********** */
+
+main {
+  flex: 1;
+  font-size: 14px;
+  overflow: auto;
+  padding: 2px 0;
+}
+
+.record {
+  cursor: pointer;
+  height: 20px;
+  line-height: 22px;
+  overflow: hidden;
+  padding: 0 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.record.selected {
+  background: #3a3a3a;
+}
+
+.record.warn {
+  color: #fc6;
+}
+
+.record.error {
+  color: #f66;
+}
+
+.record .date {
+  display: inline-block;
+  min-width: 100px;
+}
+
+/* ********** Item view ********** */
+footer {
+  border-top: 1px solid #777;
+  height: 50%;
+  overflow: auto;
+  padding: 10px;
+  position: relative;
+}
+
+.icon-close {
+  position: absolute;
+  right: 0;
+  top: 2px;
+}
+.icon-close:before {
+  content: "×";
+  font-weight: bold;
+}
+
+footer > .param {
+  margin-left: 0;
+}
+
+.param {
+  line-height: 1.5em;
+  margin-left: 8px;
+}
+
+.param label {
+  color: #e36eec;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.param label:before {
+  color: #999;
+  content: '▶';
+  display: inline-block;
+  height: 8px;
+  line-height: 12px;
+  margin-right: 2px;
+  overflow: hidden;
+  width: 8px;
+}
+.param input:checked ~ label:before {
+  content: '▼';
+}
+.param label:only-child:before {
+  content: ' ';
+}
+
+.param input {
+  display: none;
+}
+.param input:checked ~ .children {
+  display: block;
+}
+
+.param label span {
+  color: #ddd;
+}
+
+.param .children {
+  display: none;
+}
+
+.param .string {
+  color: #e93f3b;
+}
+
+.param .scalar {
+  color: #997fff;
+}

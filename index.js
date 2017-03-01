@@ -1,6 +1,6 @@
+#! /usr/bin/env node
+
 'use strict';
 
-const Server = require('./lib/Server');
-
-const server = new Server();
-server.connect();
+const app = require('./lib/app');
+app.startServer();
