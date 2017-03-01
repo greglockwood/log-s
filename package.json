@@ -1,6 +1,6 @@
 {
   "name": "log-s",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "Node server which collects logs from different clients",
   "main": "index.js",
   "scripts": {
