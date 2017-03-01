@@ -33,7 +33,7 @@ http://localhost:8085/log
 or using fetch API:
 
 ```js
-fetch('http://localhost:8085/log, {
+fetch('http://localhost:8085/log', {
   body: JSON.stringify(data),
   headers: { 'Content-Type': 'application/json' },
   method: 'POST'
